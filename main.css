@@ -72,3 +72,49 @@ body {
     margin: 0 0 2rem 0;
     color: white;
 }
+
+/* STYLING FAQ */
+
+.faq-list .faq {
+    background-color: #fff;
+    border-radius: 1rem;
+    margin: 0 0 1.5rem 0;
+    /* hack for border radius on parent */
+    overflow: hidden;
+    z-index: 1;
+}
+
+.faq-list .faq .faq-header {
+    padding: 1.5rem;
+    /* Give an impression of button to the faq header */
+    cursor: pointer;
+}
+
+.faq-list .faq .faq-header .faq-title {
+    color: #4e4e4e;
+    font-size: 1.2em;
+}
+
+.faq-list .faq .faq-body {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+
+.faq-list .faq .faq-body .faq-text {
+    text-align: justify;
+    font-size: 1em;
+    color: #4e4e4e;
+    opacity: 0;
+    padding: 0 1.5rem 1.5rem;
+    transition: opacity 0.5s;
+}
+
+/* expanded faq item */
+.faq-list .faq.expanded .faq-header {
+    padding-bottom: 0.8rem;
+}
+
+.faq-list .faq.expanded .faq-body .faq-text {
+    opacity: 1;
+}
